@@ -6,9 +6,9 @@ USERNAME=$2
 PASSWORD=$3
 
 # Update application.properties with RDS credentials
-APP_PROPERTIES="/home/ec2-user/app/src/main/resources/application.properties"
+APP_PROPERTIES="/home/ec2-user/app/ChemicalManagement/src/main/resources/application.properties"
 
-# Replace placeholders in application.properties file
+# Replace placeholders in application.properties filgite
 sed -i "s|server.port=.*|server.port=8085|g" $APP_PROPERTIES
 sed -i "s|spring.jpa.hibernate.ddl-auto=.*|spring.jpa.hibernate.ddl-auto=update|g" $APP_PROPERTIES
 sed -i "s|spring.datasource.driver-class-name=.*|spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver|g" $APP_PROPERTIES
